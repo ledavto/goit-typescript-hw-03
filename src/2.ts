@@ -23,7 +23,7 @@ class Employee {
   constructor(name: string, department: string, salary: number) {
     this.name = name;
     this.department = department;
-    this.salary = salary;
+    this.salary += 10000;
   }
 
   getEmployeeDetails() {
@@ -34,13 +34,17 @@ class Employee {
 class Manager extends Employee {
   // Реалізуйте конструктор та збільшіть salary на 10000
   constructor(addSalary: number) {
-    super("Sergii", "Builder", addSalary);
+    super("Sergii","Econom", addSalary);
+    console.log("Sal - "+this.salary);
+    console.log("addSal - "+addSalary);
   }
 }
 
-const user = new Employee("Sergii", "Builder", 156);
-console.log(user.getEmployeeDetails);
+const user = new Employee("Sergii","Econom", 300);
+console.log(user.getEmployeeDetails());
 
 const sergEmploee = new Manager(10000);
+
+console.log(sergEmploee.getEmployeeDetails());
 
 export {};
