@@ -39,10 +39,10 @@ class Manager extends Employee {
 }
 
 const user = new Employee("Sergii", "Econom", 300);
-console.log(user.getEmployeeDetails());
+// console.log(user.getEmployeeDetails());
 
 const sergEmploee = new Manager("Sergii", "Econom", 300);
 
-console.log(sergEmploee.getEmployeeDetails());
+// console.log(sergEmploee.getEmployeeDetails());
 
 export {};
