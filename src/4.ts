@@ -23,7 +23,7 @@ abstract class House {
     this.key = key;
   }
 
-  abstract OpenDoor(key: Key): void;
+  abstract openDoor(key: Key): void;
 
   comeIn(person: Person) {
     if (this.door) {
@@ -35,9 +35,7 @@ abstract class House {
 class MyHouse extends House {
   openDoor(inputKey: Key) {
     if (inputKey.getSignature() === this.key.getSignature()) {
-      console.log("Door OPEN!");
-    } else {
-      console.log("Sorry! Close");
+      this.door = true;
     }
   }
 }
